@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {Grid, Container} from '@mui/material';
+import {BrowserRouter as Router , Routes, Route} from 'react-router-dom';
+
+import Formulario from './components/Formulario';
+import Usuario from './components/Usuario';
+import Promedio from './components/Promedio';
+import ListadoUsuarios from './components/ListadoUsuarios';
 
 function App() {
+ 
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="principal">
+        <Container>
+          <Grid container spacing={2} justifyContent="center">
+            <Grid item sm={8}>
+              <Routes>
+                <Route path="/" element={<Formulario />} exact/>
+                <Route path="/usuario" element={<Usuario />}/>
+                <Route path="/listado" element={<ListadoUsuarios />}/>
+                <Route path="/promedio" element={<Promedio />}/>
+              </Routes>
+            </Grid>
+          </Grid>
+        </Container>
+      </div>
+    </Router>
   );
 }
 

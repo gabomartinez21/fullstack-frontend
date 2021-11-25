@@ -5,9 +5,46 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.principal{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  background: linear-gradient(90deg, #93e9e9, #53b1cd);
+}
+.principal form{
+  background: #fff;
+  border-radius:5px;
+  padding: 1.2rem 2rem;
+}
+
+.informacion, .promedio{
+  background:#fff;
+  border-radius:6px;
+  text-align:center;
+  padding: 2rem 1rem;
+
+}
+
+.informacion h3{
+  font-weight:normal;
+}
+.informacion h3 span{
+  font-weight:bold;
+}
+.informacion a, .promedio a{
+  color:#3e3e33;
+  text-decoration:none;
+  display:inline-block;
+  margin:10px 20px;
+}
+.informacion p {
+  margin:0 0 4px;
 }
